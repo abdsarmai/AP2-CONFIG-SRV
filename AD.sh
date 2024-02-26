@@ -7,5 +7,3 @@ apt-get update && apt-get upgrade
 apt install packagekit samba-common-bin sssd-tools sssd libnss-sss libpam-sss policykit-1 sssd ntpdate ntp realmd
 
 #Se connecter au domaine avec l'utilisateur administrateur qui gère le domaine 
-
-realm join --user=admin-1O@CleanergyO.local CleanergyO.local
