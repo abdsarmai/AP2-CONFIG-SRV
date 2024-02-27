@@ -1,0 +1,17 @@
+#----------------------SERVEUR-WEB--------------------
+cp /etc/network/interfaces /etc/network/interfaces.old
+cp ./interfaces-web /etc/network/
+mv /etc/network/interfaces-web /etc/network/interfaces
+systemctl restart networking
+
+#----------------------SERVEUR-BD--------------------
+cp /etc/network/interfaces /etc/network/interfaces.old
+cp ./interfaces-bd /etc/network/
+mv /etc/network/interfaces-bd /etc/network/interfaces
+systemctl restart networking
+
+#---------------------ADMIN--------------------
+cp /etc/netplan/01-network-manager-all.yaml /etc/netplan/01-network-manager-all.yaml.old
+cp ./config-admin.yaml /etc/netplan/
+mv /etc/netplan/config-admin.yaml /etc/netplan/01-network-manager-all.yaml
+
